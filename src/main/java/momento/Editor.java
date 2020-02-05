@@ -33,16 +33,16 @@ public class Editor {
         return "Text: " + this.state.text + " | cursor: " + this.state.cursorPos + " | font: " + this.state.currentFont;
     }
 
-    class State {
+    class State implements Cloneable {
 
         private String text;
         private int cursorPos;
         private String currentFont;
 
-        public State() {
+        private State() {
         }
 
-        public State(String text, int cursorPos, String currentFont) {
+        private State(String text, int cursorPos, String currentFont) {
             this.text = text;
             this.cursorPos = cursorPos;
             this.currentFont = currentFont;
